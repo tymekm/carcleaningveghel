@@ -39,13 +39,10 @@ main .outer-card .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 70em;
 }
 main .outer-card:first-child {
   padding: calc(var(--navHeight) + 3em) 0 0 0;
-}
-main .card {
-  width: 70em;
-  /* padding: 0 5em 3em 5em; */
 }
 main #banner {
   background: url("../assets/car-detailing.jpg");
@@ -127,12 +124,12 @@ nav #navList #logo {
   height: 80%;
   margin-right: auto;
 }
-#navList li:hover {
-  color: var(--cerulean);
-}
-#navList li a {
+nav #navList li a {
   padding: 0em 1em;
   font-size: 1.25rem;
+}
+nav #navList li:hover {
+  color: var(--cerulean);
 }
 footer {
   bottom: 0;
