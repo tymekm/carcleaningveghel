@@ -1,0 +1,106 @@
+:root {
+  --cerulean: #4484ce;
+  --alluminium: #d9d9d9;
+  --ligth: #f9cf00;
+  --tangerine: #f19f4d;
+  --navHeight: 4em;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--alluminium);
+  font-family: Helvetica;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .outer-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  min-height: 20em;
+}
+main .outer-card .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .outer-card:first-child {
+  padding: calc(var(--navHeight) + 3em) 0 0 0;
+}
+main .card {
+  width: 70em;
+  /* padding: 0 5em 3em 5em; */
+}
+main #banner {
+  background: url("../assets/car-detailing.jpg");
+  background-color: var(--alluminium);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* background-size: contain; */
+  /* width:100%; */
+  /* height:100%; */
+  /* object-fit: contain; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+main #banner .card {
+  /* background-color: red; */
+  width: auto;
+  text-align: center;
+}
+main #banner .card h1 {
+  color: var(--alluminium);
+  text-shadow: 2px 2px black;
+  font-size: 5em;
+}
+main #banner .card h2 {
+  color: var(--ligth);
+  text-shadow: 2px 2px black;
+  font-size: 2em;
+}
+main #banner .card img {
+  width: 30%;
+  height: auto;
+}
+main #about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main #about #text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--cerulean);
+  width: 34em;
+}
+main #about #text h1 {
+  padding-bottom: 2ch;
+}
+main #about #text p {
+  padding: 0 5em;
+}
+main #about #text h1,
+main #about #text p {
+  text-align: center;
+}
+main #about #image img {
+  width: 34em;
+}
