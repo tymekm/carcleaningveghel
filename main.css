@@ -1,7 +1,7 @@
 :root {
   --cerulean: #4484ce;
   --alluminium: #d9d9d9;
-  --ligth: #f9cf00;
+  --light: #f9cf00;
   --tangerine: #f19f4d;
   --navHeight: 4em;
 }
@@ -23,80 +23,6 @@ body {
   font-family: Helvetica;
   min-height: 100vh;
 }
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-main .outer-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  min-height: 20em;
-}
-main .outer-card .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 70em;
-}
-main .outer-card:first-child {
-  padding: calc(var(--navHeight) + 3em) 0 0 0;
-}
-main #banner {
-  height: 100%;
-  min-height: 35vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("../assets/car-detailing.jpg");
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-main #banner .card {
-  width: auto;
-  text-align: center;
-}
-main #banner .card h1 {
-  color: var(--alluminium);
-  text-shadow: 2px 2px black;
-  font-size: 5em;
-}
-main #banner .card h2 {
-  color: var(--ligth);
-  text-shadow: 2px 2px black;
-  font-size: 2em;
-}
-main #banner .card img {
-  width: 30%;
-  height: auto;
-}
-main #about {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-main #about #text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--cerulean);
-  width: 34em;
-}
-main #about #text h1 {
-  padding-bottom: 2ch;
-}
-main #about #text p {
-  padding: 0 5em;
-}
-main #about #text h1,
-main #about #text p {
-  text-align: center;
-}
-main #about #image img {
-  width: 34em;
-}
 nav {
   position: fixed;
   display: flex;
@@ -107,7 +33,6 @@ nav {
   box-shadow: 0em 0.3em 0.3em rgba(0, 0, 0, 0.3);
 }
 nav #navList {
-  /* min-width: 70%; */
   width: 70em;
   display: flex;
   flex-direction: row;
@@ -127,11 +52,146 @@ nav #navList li a {
 nav #navList li:hover {
   color: var(--cerulean);
 }
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+main .container .content {
+  padding-top: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .container .content:last-of-type {
+  padding-bottom: 5em;
+}
+main #banner {
+  height: 100%;
+  min-height: 35vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../assets/car-detailing.jpg");
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+main #banner .content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+main #banner .content h1 {
+  color: var(--alluminium);
+  text-shadow: 2px 2px black;
+  font-size: 5em;
+}
+main #banner .content h2 {
+  color: var(--ligth);
+  text-shadow: 2px 2px black;
+  font-size: 2em;
+}
+main #banner .content img {
+  width: 30%;
+  height: auto;
+}
+main #about .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70em;
+}
+main #about .content #text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--cerulean);
+  width: 34em;
+}
+main #about .content #text h1 {
+  padding-bottom: 2ch;
+}
+main #about .content #text p {
+  padding: 0 5em;
+}
+main #about .content #text h1,
+main #about .content #text p {
+  text-align: center;
+}
+main #about .content #image img {
+  width: 34em;
+}
 footer {
+  display: flex;
+  justify-content: center;
   bottom: 0;
   width: 100%;
-  background-color: var(--cerulean);
+  background-color: #222;
+  color: #6e6e6e;
   margin: 0;
   padding: 0;
   min-height: 5em;
+}
+footer .content {
+  display: flex;
+  flex-direction: row;
+  width: 70em;
+}
+@media screen and (max-height: 70em) {
+  footer .content {
+    flex-direction: column;
+  }
+}
+footer .content > div {
+  width: 100%;
+  padding: 2em 1em;
+}
+footer .content > div h3 {
+  color: #c5c5c5;
+  padding-bottom: 1ch;
+}
+footer .content #diensten {
+  display: flex;
+  flex-direction: column;
+}
+footer .content #diensten a {
+  padding-bottom: 1ch;
+}
+footer .content #diensten a:hover {
+  color: var(--light);
+}
+footer .content #openingstijden .dag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 15em;
+  min-width: 10em;
+  padding-bottom: 0.5ch;
+}
+footer .content #socials .fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+footer .content #socials .fa:hover {
+  opacity: 0.7;
+}
+footer .content #socials .fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+footer .content #contact div {
+  padding-bottom: 1ch;
+}
+footer .content #contact a:hover {
+  color: var(--light);
 }
