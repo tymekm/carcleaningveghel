@@ -5,6 +5,9 @@
   --tangerine: #f19f4d;
   --navHeight: 4em;
 }
+.content {
+  width: 70em;
+}
 * {
   padding: 0;
   margin: 0;
@@ -24,6 +27,7 @@ body {
   min-height: 100vh;
 }
 nav {
+  z-index: 1;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -33,7 +37,6 @@ nav {
   box-shadow: 0em 0.3em 0.3em rgba(0, 0, 0, 0.3);
 }
 nav #navList {
-  width: 70em;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -105,7 +108,6 @@ main #about .content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 70em;
 }
 main #about .content #text {
   display: flex;
@@ -127,6 +129,88 @@ main #about .content #text p {
 main #about .content #image img {
   width: 34em;
 }
+main #diensten {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main #diensten #header h1 {
+  margin-bottom: 1ch;
+}
+main #diensten #header h3 {
+  margin-bottom: 5ch;
+}
+main #diensten * {
+  text-align: center;
+}
+main #diensten #cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+main #diensten #cards .card {
+  align-self: flex-start;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 31%;
+  height: 400px;
+}
+main #diensten #cards .card:first-child {
+  margin-bottom: 50px;
+}
+main #diensten #cards .card:nth-child(2),
+main #diensten #cards .card:nth-child(5) {
+  margin: 0 1em;
+}
+main #diensten #cards .card a img {
+  width: 70%;
+  height: auto;
+  margin: 50px 0;
+}
+main #diensten #cards .card a img {
+  transition: transform 1.2s;
+}
+main #diensten #cards .card a img:hover {
+  scale: 1.1;
+}
+main #diensten #cards .card .text {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main #diensten #cards .card .text h3,
+main #diensten #cards .card .text p {
+  margin-bottom: 1ch;
+}
+@media screen and (max-height: 70em) {
+  main #diensten #cards {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  main #diensten #cards .card {
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    height: auto;
+    min-height: 60vh;
+    margin-bottom: 50px;
+  }
+  main #diensten #cards .card:first-child {
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  main #diensten #cards .card:nth-child(2),
+  main #diensten #cards .card:nth-child(5) {
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  main #diensten #cards .card .text {
+    font-size: 130%;
+    margin: 0 50px;
+    background-color: red;
+  }
+}
 footer {
   display: flex;
   justify-content: center;
@@ -141,7 +225,6 @@ footer {
 footer .content {
   display: flex;
   flex-direction: row;
-  width: 70em;
 }
 @media screen and (max-height: 70em) {
   footer .content {
