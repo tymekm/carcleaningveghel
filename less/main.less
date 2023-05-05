@@ -1,12 +1,7 @@
-:root {
-  --cerulean: #4484ce;
-  --alluminium: #d9d9d9;
-  --light: #f9cf00;
-  --tangerine: #f19f4d;
-  --navHeight: 4em;
-}
-
+@blue: #2789c8;
+@navHeight: 4em;
 @contentWidth: 70em;
+@max: (max-width: @contentWidth);
 
 .content {
   width: @contentWidth;
@@ -18,18 +13,22 @@
 }
 a {
   color: inherit;
-  /* blue colors for links too */
   text-decoration: inherit;
-  /* no underline */
+}
+
+h1 {
+  color: @blue;
+}
+
+p {
+  color: #6E6E6E;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--alluminium);
+  background-color: #fff;
   font-family: Helvetica;
-  min-height: 100vh;
+  // min-height: 100vh;
+  margin-top: @navHeight;
 }
 
 // Navbar -------------------
@@ -48,7 +47,7 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    height: var(--navHeight);
+    height: @navHeight;
     list-style-type: none;
 
     #logo {
@@ -61,7 +60,7 @@ nav {
         font-size: 1.25rem;
       }
       &:hover {
-        color: var(--cerulean);
+        color: @blue;
       }
     }
   }
@@ -78,14 +77,26 @@ main {
     justify-content: center;
     align-content: center;
     .content {
-      padding-top: @contentPad;
+      margin-top: @contentPad;
       display: flex;
       flex-direction: column;
       justify-content: center;
       &:last-of-type {
-        padding-bottom: @contentPad;
+        margin-bottom: @contentPad;
       }
     }
+    .card-shadow {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+  hr {
+    position: relative;
+    top: 20px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: @contentWidth;
+    margin: auto;
   }
 
   // Banner -------------------
@@ -124,6 +135,7 @@ main {
   // About -------------------
   #about {
     .content {
+      // height: auto;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -132,13 +144,13 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: var(--cerulean);
         width: @contentWidth * 0.5 - @fill;
+        height: 100%;
         h1 {
-          padding-bottom: 2ch;
+          margin-bottom: 2ch;
         }
         p {
-          padding: 0 5em;
+          margin: 0 5em;
         }
         h1,
         p {
@@ -147,6 +159,24 @@ main {
       }
       #image img {
         width: @contentWidth * 0.5 - @fill;
+        height: 100%;
+      }
+    }
+    @media @max {
+      .content {
+        width: 50%;
+        height: 1000px;
+        #text {
+          width: 100%;
+          margin-bottom: 5em;
+          p {
+            margin: 5em;
+          }
+        }
+        #image img {
+          width: 100%;
+        }
+        flex-direction: column;
       }
     }
   }
@@ -176,8 +206,6 @@ main {
         &:first-child {
           margin-bottom: 50px;
         }
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
         @margin: 1em;
         &:nth-child(2),
         &:nth-child(5) {
@@ -207,7 +235,7 @@ main {
           }
         }
       }
-      @media screen and (max-height: @contentWidth) {
+      @media @max {
         flex-direction: column;
         justify-content: center;
         flex-wrap: nowrap;
@@ -230,7 +258,6 @@ main {
           .text {
             font-size: 130%;
             margin: 0 50px;
-            background-color: red;
           }
         }
       }
@@ -252,7 +279,7 @@ footer {
   .content {
     display: flex;
     flex-direction: row;
-    @media screen and (max-height: @contentWidth) {
+    @media @max {
       flex-direction: column;
     }
     > div {
