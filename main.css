@@ -1,6 +1,8 @@
-#test * {
-  font-size: 50em;
-  color: green;
+.anchor {
+  display: block;
+  position: relative;
+  top: -4em;
+  visibility: hidden;
 }
 .content {
   width: 70em;
@@ -17,7 +19,7 @@ h1 {
   color: #2789c8;
 }
 p {
-  color: #6e6e6e;
+  color: #222;
 }
 body {
   background-color: #fff;
@@ -165,6 +167,7 @@ main #diensten #header h1 {
   margin-bottom: 1ch;
 }
 main #diensten #header h3 {
+  color: #222;
   margin-bottom: 5ch;
 }
 main #diensten * {
@@ -173,19 +176,17 @@ main #diensten * {
 main #diensten #cards {
   display: flex;
   flex-flow: row wrap;
+  flex-shrink: 1;
   justify-content: space-between;
 }
 main #diensten #cards .card {
-  align-self: flex-start;
   width: 31%;
-  height: 400px;
+  min-width: 200px;
+  min-height: 400px;
+  margin-bottom: 20px;
 }
-main #diensten #cards .card:first-child {
-  margin-bottom: 50px;
-}
-main #diensten #cards .card:nth-child(2),
-main #diensten #cards .card:nth-child(5) {
-  margin: 0 1em;
+main #diensten #cards .card .wrapper {
+  margin: 10px;
 }
 main #diensten #cards .card a img {
   width: 70%;
@@ -204,7 +205,10 @@ main #diensten #cards .card .text {
   flex-direction: column;
   justify-content: center;
 }
-main #diensten #cards .card .text h3,
+main #diensten #cards .card .text h3 {
+  margin-bottom: 1ch;
+  color: #2789c8;
+}
 main #diensten #cards .card .text p {
   margin-bottom: 1ch;
 }
@@ -212,24 +216,12 @@ main #diensten #cards .card .text p {
   main #diensten #cards {
     flex-direction: column;
     justify-content: center;
-    flex-wrap: nowrap;
   }
   main #diensten #cards .card {
     margin: auto;
-    padding: 0;
     width: 50%;
     height: auto;
     min-height: 60vh;
-    margin-bottom: 50px;
-  }
-  main #diensten #cards .card:first-child {
-    margin: auto;
-    margin-bottom: 50px;
-  }
-  main #diensten #cards .card:nth-child(2),
-  main #diensten #cards .card:nth-child(5) {
-    margin: auto;
-    margin-bottom: 50px;
   }
   main #diensten #cards .card .text {
     font-size: 130%;

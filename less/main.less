@@ -1,13 +1,15 @@
 @blue: #2789c8;
+@grey: #6e6e6e;
+@darkGrey: #222;
 @navHeight: 4em;
 @contentWidth: 70em;
 @max: (max-width: @contentWidth);
 
-#test  {
-  * {
-  font-size: 50em;
-  color: green;
-  }
+.anchor {
+  display: block;
+  position: relative;
+  top: -@navHeight;
+  visibility: hidden;
 }
 
 .content {
@@ -28,7 +30,7 @@ h1 {
 }
 
 p {
-  color: #6e6e6e;
+  color: @darkGrey;
 }
 
 body {
@@ -196,28 +198,28 @@ main {
         margin-bottom: 1ch;
       }
       h3 {
+        color: @darkGrey;
         margin-bottom: 5ch;
       }
     }
     * {
       text-align: center;
     }
+
     #cards {
       display: flex;
       flex-flow: row wrap;
+      flex-shrink: 1;
       justify-content: space-between;
       .card {
-        align-self: flex-start;
-        &:first-child {
-          margin-bottom: 50px;
+        .wrapper {
+          margin: 10px;
         }
         @margin: 1em;
-        &:nth-child(2),
-        &:nth-child(5) {
-          margin: 0 @margin;
-        }
         width: 33% - (@margin * 2);
-        height: 400px;
+        min-width: 200px;
+        min-height: 400px;
+        margin-bottom: 20px;
         a img {
           width: 70%;
           height: auto;
@@ -234,7 +236,10 @@ main {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          h3,
+          h3 {
+            margin-bottom: 1ch;
+            color: @blue;
+          }
           p {
             margin-bottom: 1ch;
           }
@@ -243,23 +248,11 @@ main {
       @media @max {
         flex-direction: column;
         justify-content: center;
-        flex-wrap: nowrap;
         .card {
           margin: auto;
-          padding: 0;
           width: 50%;
           height: auto;
           min-height: 60vh;
-          margin-bottom: 50px;
-          &:first-child {
-            margin: auto;
-            margin-bottom: 50px;
-          }
-          &:nth-child(2),
-          &:nth-child(5) {
-            margin: auto;
-            margin-bottom: 50px;
-          }
           .text {
             font-size: 130%;
             margin: 0 50px;
@@ -276,8 +269,8 @@ footer {
   justify-content: center;
   bottom: 0;
   width: 100%;
-  background-color: #222;
-  color: #6e6e6e;
+  background-color: @darkGrey;
+  color: @grey;
   margin: 0;
   padding: 0;
   min-height: 5em;
