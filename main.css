@@ -1,3 +1,7 @@
+#test * {
+  font-size: 50em;
+  color: green;
+}
 .content {
   width: 70em;
 }
@@ -13,7 +17,7 @@ h1 {
   color: #2789c8;
 }
 p {
-  color: #6E6E6E;
+  color: #6e6e6e;
 }
 body {
   background-color: #fff;

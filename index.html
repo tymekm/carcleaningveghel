@@ -9,17 +9,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="jquery-min.js"></script>
+     <script> 
+	$(function(){
+	    $("nav").load("navbar.html"); 
+	});
+	$(function(){
+	    $("footer").load("footer.html"); 
+	});
+    </script>
   </head>
   <body>
-    <nav>
-      <ul class="content" id="navList">
-        <img id="logo" src="./assets/logo.png" alt="Logo" />
-        <li><a href="">Home</a></li>
-        <li><a name="" href="#diensten">Diensten</a></li>
-        <li><a href="">Tarieven</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
+    <nav></nav>
     <main>
       <div id="banner">
         <div class="content">
@@ -139,75 +140,6 @@
         </div>
       </div>
     </main>
-    <footer>
-      <div class="content">
-        <div id="diensten">
-          <h3>Diensten</h3>
-          <a href="">Wassen</a>
-          <a href="">Interieur reiniging</a>
-          <a href="">Lakcorrectie (polijsten)</a>
-          <a href="">Doffe koplamp herstel</a>
-          <a href="">Ozon behandeling</a>
-          <a href="">Glas coating</a>
-        </div>
-        <div id="openingstijden">
-          <h3>Openingstijden</h3>
-          <div class="dag">
-            <p>Maandag</p>
-            <p>8:00-17:00</p>
-          </div>
-          <div class="dag">
-            <p>Dinsdag</p>
-            <p>8:00-17:00</p>
-          </div>
-          <div class="dag">
-            <p>Woensdag</p>
-            <p>8:00-17:00</p>
-          </div>
-          <div class="dag">
-            <p>Donderdag</p>
-            <p>8:00-17:00</p>
-          </div>
-          <div class="dag">
-            <p>Vrijdag</p>
-            <p>8:00-17:00</p>
-          </div>
-          <div class="dag">
-            <p>Zaterdag</p>
-            <p>8:00-17:00</p>
-          </div>
-          <div class="dag">
-            <p>Zondag</p>
-            <p>8:00-17:00</p>
-          </div>
-        </div>
-        <div id="socials">
-          <h3>Follow Us</h3>
-          <a
-            class="fa fa-facebook"
-            href="https://www.facebook.com/Carcleaningveghel"
-            target="_blank"
-          >
-          </a>
-        </div>
-        <div id="contact">
-          <h3>Contact</h3>
-          <div class="card" id="contact">
-            <div id="email">
-              <a href="mailto:info@carcleaningveghel.nl" class="fa fa-envelope">
-                info@carcleaningveghel.nl</a
-              >
-            </div>
-            <div id="tel-num">
-              <p class="fa fa-phone">+31-623192688</p>
-            </div>
-            <div id="adres">
-              <div>Den dubbelen 3</div>
-              <div>5466RL Veghel</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer></footer>
   </body>
 </html>

@@ -3,6 +3,13 @@
 @contentWidth: 70em;
 @max: (max-width: @contentWidth);
 
+#test  {
+  * {
+  font-size: 50em;
+  color: green;
+  }
+}
+
 .content {
   width: @contentWidth;
 }
@@ -21,13 +28,12 @@ h1 {
 }
 
 p {
-  color: #6E6E6E;
+  color: #6e6e6e;
 }
 
 body {
   background-color: #fff;
   font-family: Helvetica;
-  // min-height: 100vh;
   margin-top: @navHeight;
 }
 
@@ -135,7 +141,6 @@ main {
   // About -------------------
   #about {
     .content {
-      // height: auto;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
