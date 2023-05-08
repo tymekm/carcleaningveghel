@@ -333,8 +333,8 @@ main #diensten #cards .card .text p {
     margin-bottom: 2em;
     width: 50%;
     min-width: 300px;
+    max-width: 400px;
     height: auto;
-    min-height: 60vh;
   }
   main #diensten #cards .card .text {
     font-size: 130%;
