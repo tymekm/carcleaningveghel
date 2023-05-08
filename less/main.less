@@ -123,12 +123,20 @@ main {
       h1 {
         color: @blue;
         text-shadow: 2px 2px black;
-        font-size: 5em;
+        font-size: 5rem;
+        @media @max {
+          font-size: 8vw;
+          text-align: center;
+        }
       }
       h2 {
         color: white;
-        text-shadow: 2px 2px 2px  black;
-        font-size: 2em;
+        text-shadow: 2px 2px 2px black;
+        font-size: 2rem;
+        @media @max {
+          font-size: 5vw;
+          text-align: center;
+        }
       }
       img {
         width: 30%;
@@ -189,9 +197,6 @@ main {
   }
 
   // Diensten ---------------
-  .container:last-of-type {
-    // background-color: red;
-  }
   #diensten {
     display: flex;
     flex-direction: column;
@@ -253,6 +258,7 @@ main {
         justify-content: center;
         .card {
           margin: auto;
+          margin-bottom: 2em;
           width: 50%;
           height: auto;
           min-height: 60vh;

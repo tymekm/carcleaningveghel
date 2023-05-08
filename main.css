@@ -101,12 +101,24 @@ main #banner .content {
 main #banner .content h1 {
   color: #2789c8;
   text-shadow: 2px 2px black;
-  font-size: 5em;
+  font-size: 5rem;
+}
+@media (max-width: 70em) {
+  main #banner .content h1 {
+    font-size: 8vw;
+    text-align: center;
+  }
 }
 main #banner .content h2 {
   color: white;
-  text-shadow: 2px 2px 2px  black;
-  font-size: 2em;
+  text-shadow: 2px 2px 2px black;
+  font-size: 2rem;
+}
+@media (max-width: 70em) {
+  main #banner .content h2 {
+    font-size: 5vw;
+    text-align: center;
+  }
 }
 main #banner .content img {
   width: 30%;
@@ -219,6 +231,7 @@ main #diensten #cards .card .text p {
   }
   main #diensten #cards .card {
     margin: auto;
+    margin-bottom: 2em;
     width: 50%;
     height: auto;
     min-height: 60vh;
