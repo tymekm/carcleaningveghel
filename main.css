@@ -393,15 +393,17 @@ footer * {
 footer .content {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 @media (max-width: 70em) {
   footer .content {
     flex-direction: column;
+    padding: 2em 2em;
   }
 }
 footer .content > div {
   width: 100%;
-  padding: 2em 1em;
+  padding: 2em 0;
 }
 footer .content > div h3 {
   color: #c5c5c5;

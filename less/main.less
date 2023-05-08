@@ -423,16 +423,17 @@ footer {
   }
   margin: 0;
   padding: 0;
-  // min-height: @footerHeight;
   .content {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     @media @max {
       flex-direction: column;
+      padding: 2em 2em;
     }
     > div {
       width: 100%;
-      padding: 2em 1em;
+      padding: 2em 0;
       h3 {
         color: #c5c5c5;
         padding-bottom: 1ch;
