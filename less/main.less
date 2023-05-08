@@ -2,6 +2,7 @@
 @grey: #6e6e6e;
 @darkGrey: #222;
 @navHeight: 4em;
+@footerHeight: 50em;
 @contentWidth: 70em;
 @max: (max-width: @contentWidth);
 @startHamb: (max-width: 632px);
@@ -35,9 +36,12 @@ p {
 }
 
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
   font-family: Helvetica;
-  margin-top: @navHeight;
 }
 
 // Navbar -------------------
@@ -158,16 +162,6 @@ nav {
         background-color: #cfd8dc;
       }
     }
-
-    #navList {
-      #links {
-        display: none;
-        position: absolute;
-        top: 0;
-        flex-direction: column;
-        // display: none;
-      }
-    }
   }
 }
 
@@ -175,6 +169,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: @navHeight;
   @contentPad: 2.5em;
   .container {
     display: flex;
@@ -375,6 +370,47 @@ main {
   }
 }
 
+// Contact ----------------
+#contact .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  * {
+    color: @darkGrey;
+  }
+  #info {
+    text-align: center;
+    margin-bottom: 5em;
+    width: 100%;
+    h1 {
+      margin-bottom: 1ch;
+      color: @blue;
+    }
+    p {
+      max-width: 500px;
+      margin: auto;
+    }
+  }
+  #contact-form {
+    width: 50%;
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  #contact-info {
+    width: 40%;
+    h2 {
+      color: @darkGrey;
+      margin-bottom: 1ch;
+    }
+    a:hover {
+      color: @blue;
+    }
+  }
+}
+
 // Footer -----------------
 footer {
   display: flex;
@@ -387,7 +423,7 @@ footer {
   }
   margin: 0;
   padding: 0;
-  min-height: 5em;
+  // min-height: @footerHeight;
   .content {
     display: flex;
     flex-direction: row;
@@ -444,7 +480,7 @@ footer {
       }
     }
 
-    #contact {
+    #contact-info {
       div {
         padding-bottom: 1ch;
       }
