@@ -1,7 +1,25 @@
-<ul class="content" id="navList">
+<script type="text/javascript">
+  function hideLinks() {
+    document.getElementById("menu__toggle").checked = false;
+  }
+</script>
+<div class="content" id="navList">
   <img id="logo" src="./assets/logo.png" alt="Logo" />
-  <li><a href="#banner-anchor">Home</a></li>
-  <li><a href="#diensten-anchor">Diensten</a></li>
-  <li><a href="">Tarieven</a></li>
-  <li><a href="">Contact</a></li>
-</ul>
+  <input id="menu__toggle" type="checkbox" />
+  <label class="menu__btn" for="menu__toggle">
+    <span></span>
+  </label>
+
+  <ul class="menu__box">
+    <li>
+      <a onclick="hideLinks()" class="menu__item" href="#banner-anchor">Home</a>
+    </li>
+    <li>
+      <a onclick="hideLinks()" class="menu__item" href="#diensten-anchor"
+        >Diensten</a
+      >
+    </li>
+    <li><a onclick="hideLinks()" class="menu__item" href="#">Tarieven</a></li>
+    <li><a onclick="hideLinks()" class="menu__item" href="#">Contact</a></li>
+  </ul>
+</div>

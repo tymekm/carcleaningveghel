@@ -4,6 +4,7 @@
 @navHeight: 4em;
 @contentWidth: 70em;
 @max: (max-width: @contentWidth);
+@startHamb: (max-width: 632px);
 
 .anchor {
   display: block;
@@ -57,18 +58,114 @@ nav {
     align-items: center;
     height: @navHeight;
     list-style-type: none;
+    max-width: 90vw;
 
     #logo {
       height: 80%;
       margin-right: auto;
     }
-    li {
-      a {
-        padding: 0em 1em;
-        font-size: 1.25rem;
+    #menu__toggle {
+      display: none;
+    }
+    .menu__box {
+      display: flex;
+      li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        a {
+          padding: 0em 1em;
+          font-size: 1.25rem;
+        }
+        &:hover {
+          color: @blue;
+        }
       }
+    }
+  }
+  @media @startHamb {
+    #menu__toggle {
+      opacity: 0;
+    }
+    #menu__toggle:checked + .menu__btn > span {
+      transform: rotate(45deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0deg);
+    }
+    #menu__toggle:checked + .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+      left: 0 !important;
+    }
+    .menu__btn {
+      position: relative;
+      top: 10px;
+      right: 50px;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 1;
+      > span,
+      > span::before,
+      > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition-duration: 0.25s;
+      }
+      > span::before {
+        content: "";
+        top: -8px;
+      }
+      > span::after {
+        content: "";
+        top: 8px;
+      }
+    }
+    .menu__box {
+      flex-direction: column;
+      li a {
+        margin: 0.5em;
+        padding: 1.2em;
+      }
+      position: fixed;
+      top: 0;
+      left: 100%;
+      width: 60vw;
+      height: 100%;
+      margin: 0 40vw;
+      padding: 80px 0;
+      list-style: none;
+      background-color: white;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+      transition-duration: 0.25s;
+    }
+    .menu__item {
+      display: block;
+      padding: 12px 24px;
+      color: #333;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition-duration: 0.25s;
       &:hover {
-        color: @blue;
+        background-color: #cfd8dc;
+      }
+    }
+
+    #navList {
+      #links {
+        display: none;
+        position: absolute;
+        top: 0;
+        flex-direction: column;
+        // display: none;
       }
     }
   }
@@ -286,7 +383,7 @@ footer {
   width: 100%;
   background-color: @darkGrey;
   * {
-    color:@grey;
+    color: @grey;
   }
   margin: 0;
   padding: 0;
