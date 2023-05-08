@@ -152,19 +152,24 @@ main #about .content #image img {
 }
 @media (max-width: 70em) {
   main #about .content {
-    width: 50%;
     flex-direction: column;
+    align-items: center;
   }
   main #about .content #text {
-    width: 100%;
-    margin-bottom: 5em;
+    width: 60vw;
+    min-width: 300px;
+    margin-bottom: 3em;
   }
   main #about .content #text h1 {
     margin: 1ch 0;
   }
   main #about .content #text p {
-    margin: 3em;
+    margin: 2em;
     margin-top: 0;
+  }
+  main #about .content #image {
+    width: 60vw;
+    min-width: 300px;
   }
   main #about .content #image img {
     width: 100%;
@@ -233,6 +238,7 @@ main #diensten #cards .card .text p {
     margin: auto;
     margin-bottom: 2em;
     width: 50%;
+    min-width: 300px;
     height: auto;
     min-height: 60vh;
   }

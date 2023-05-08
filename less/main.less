@@ -176,22 +176,48 @@ main {
     }
     @media @max {
       .content {
-        width: 50%;
+        flex-direction: column;
+        align-items: center;
         #text {
-          width: 100%;
-          margin-bottom: 5em;
+          width: 60vw;
+          min-width: 300px;
+          margin-bottom: 3em;
           h1 {
             margin: 1ch 0;
           }
           p {
-            margin: 3em;
+            margin: 2em;
             margin-top: 0;
           }
         }
-        #image img {
-          width: 100%;
+        #image {
+          width: 60vw;
+          min-width: 300px;
+          img {
+            width: 100%;
+          }
         }
-        flex-direction: column;
+        // background-color: red;
+        // > * {
+        //   width: 60%;
+        //   background-color: green;
+        //   margin: auto;
+        //   // min-width: 300px;
+        //   width: 100%;
+        // }
+        // #text {
+        //   margin-bottom: 3em;
+        //   h1 {
+        //     margin: 1ch 0;
+        //   }
+        //   p {
+        //     margin: 3em;
+        //     margin-top: 0;
+        //   }
+        // }
+        // #image img {
+        //   width: 100%;
+        // }
       }
     }
   }
@@ -260,6 +286,7 @@ main {
           margin: auto;
           margin-bottom: 2em;
           width: 50%;
+          min-width: 300px;
           height: auto;
           min-height: 60vh;
           .text {
