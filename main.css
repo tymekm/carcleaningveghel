@@ -62,27 +62,24 @@ main {
 }
 main .container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-content: center;
 }
 main .container .content {
-  margin-top: 5em;
+  margin: 2.5em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-main .container .content:last-of-type {
-  margin-bottom: 5em;
+main .container .content:first-child {
+  margin-top: 5em;
 }
 main .container .card-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 main hr {
   position: relative;
-  top: 20px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 2px solid #ccc;
   width: 70em;
   margin: auto;
 }
@@ -144,15 +141,18 @@ main #about .content #image img {
 @media (max-width: 70em) {
   main #about .content {
     width: 50%;
-    height: 1000px;
     flex-direction: column;
   }
   main #about .content #text {
     width: 100%;
     margin-bottom: 5em;
   }
+  main #about .content #text h1 {
+    margin: 1ch 0;
+  }
   main #about .content #text p {
-    margin: 5em;
+    margin: 3em;
+    margin-top: 0;
   }
   main #about .content #image img {
     width: 100%;
