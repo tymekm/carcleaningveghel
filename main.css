@@ -253,10 +253,12 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: #222;
-  color: #6e6e6e;
   margin: 0;
   padding: 0;
   min-height: 5em;
+}
+footer * {
+  color: #6e6e6e;
 }
 footer .content {
   display: flex;
@@ -283,7 +285,7 @@ footer .content #diensten a {
   padding-bottom: 1ch;
 }
 footer .content #diensten a:hover {
-  color: var(--light);
+  color: white;
 }
 footer .content #openingstijden .dag {
   display: flex;
@@ -312,5 +314,5 @@ footer .content #contact div {
   padding-bottom: 1ch;
 }
 footer .content #contact a:hover {
-  color: var(--light);
+  color: white;
 }

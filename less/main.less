@@ -197,27 +197,6 @@ main {
             width: 100%;
           }
         }
-        // background-color: red;
-        // > * {
-        //   width: 60%;
-        //   background-color: green;
-        //   margin: auto;
-        //   // min-width: 300px;
-        //   width: 100%;
-        // }
-        // #text {
-        //   margin-bottom: 3em;
-        //   h1 {
-        //     margin: 1ch 0;
-        //   }
-        //   p {
-        //     margin: 3em;
-        //     margin-top: 0;
-        //   }
-        // }
-        // #image img {
-        //   width: 100%;
-        // }
       }
     }
   }
@@ -306,7 +285,9 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: @darkGrey;
-  color: @grey;
+  * {
+    color:@grey;
+  }
   margin: 0;
   padding: 0;
   min-height: 5em;
@@ -332,7 +313,7 @@ footer {
         padding-bottom: 1ch;
 
         &:hover {
-          color: var(--light);
+          color: white;
         }
       }
     }
@@ -371,7 +352,7 @@ footer {
         padding-bottom: 1ch;
       }
       a:hover {
-        color: var(--light);
+        color: white;
       }
     }
   }
