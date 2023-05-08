@@ -91,21 +91,21 @@ main #banner {
   background-image: url("../assets/car-detailing.jpg");
   display: flex;
   justify-content: center;
-  align-content: center;
 }
 main #banner .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
 }
 main #banner .content h1 {
-  color: var(--alluminium);
+  color: #2789c8;
   text-shadow: 2px 2px black;
   font-size: 5em;
 }
 main #banner .content h2 {
-  color: var(--ligth);
-  text-shadow: 2px 2px black;
+  color: white;
+  text-shadow: 2px 2px 2px  black;
   font-size: 2em;
 }
 main #banner .content img {
