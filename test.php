@@ -15,29 +15,14 @@
       $(function () {
         $("footer").load("footer.html");
       });
-
-      $(document).ready(function () {
-        $("#form").on("submit", function () {
-          let email = $("#email").val();
-          $.ajax({
-            url: "mail.php",
-            method: $(this).attr("method"),
-            data: $(this).serialize(),
-            success: function (response) {
-              alert(response);
-            },
-          });
-          return false;
-        });
-      });
     </script>
     <nav></nav>
     <main>
       <div id="banner">
         <a class="anchor" id="banner-anchor"></a>
         <div class="content">
-          <h1>Car cleaning Veghel</h1>
-          <h2>Professioneel, betrouwbaar, deskundig</h2>
+          <!-- <h1>Contact</h1> -->
+          <!-- <h2>Professioneel, betrouwbaar, deskundig</h2> -->
         </div>
       </div>
       <div class="container" id="contact">
@@ -50,12 +35,7 @@
             </p>
           </div>
           <div id="contact-form">
-            <form
-              enctype="multipart/form-data"
-              id="form"
-              method="post"
-              action="mail.php"
-            >
+            <form id="form" method="post" action="./mail.php">
               <h3>Contact formulier</h3>
               <input
                 id="name-field"
@@ -75,8 +55,7 @@
                 id="telnum-field"
                 type="text"
                 name="telnum"
-                placeholder="Telefoon nummer *"
-                required
+                placeholder="Telefoon nummer"
               />
               <textarea
                 id="message-field"
