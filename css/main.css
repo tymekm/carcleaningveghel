@@ -391,14 +391,14 @@ main #diensten #cards .card .text p {
   font-size: 1.05rem;
   font-family: Helvetica;
   padding: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-shadow: none;
 }
 #contact .content #contact-form form .form-input:focus {
-  border: none;
-  outline: none;
-  border-radius: 2px;
-  transition-delay: 0.25s;
-  box-shadow: 0 0 0 1px #2789c8;
+  transition: 0.6s;
+  border: 1px solid #2789c8;
 }
 #contact .content #contact-form form #submit-button {
   width: 90px;

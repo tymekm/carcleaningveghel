@@ -69,6 +69,7 @@
                 name="name"
                 placeholder="Naam"
                 required
+                oninvalid="this.setCustomValidity('Dit veld is veplicht')"
               />
               <input
                 class="form-input"
@@ -77,6 +78,7 @@
                 name="email"
                 placeholder="Email"
                 required
+                oninvalid="this.setCustomValidity('Dit veld is veplicht')"
               />
               <input
                 class="form-input"
@@ -85,6 +87,7 @@
                 name="telnum"
                 placeholder="Telefoon"
                 required
+                oninvalid="this.setCustomValidity('Dit veld is veplicht')"
               />
               <textarea
                 class="form-input"
@@ -94,6 +97,7 @@
                 name="message"
                 placeholder="Bericht"
                 required
+                oninvalid="this.setCustomValidity('Dit veld is veplicht')"
               ></textarea>
               <input id="submit-button" type="submit" value="Verzend" />
             </form>
