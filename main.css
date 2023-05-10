@@ -303,10 +303,10 @@ main #diensten #cards .card a img {
   margin: 50px 0;
 }
 main #diensten #cards .card a img {
-  transition: transform 1.2s;
+  transition: 0.3s;
 }
 main #diensten #cards .card a img:hover {
-  scale: 1.1;
+  transform: scale(1.15) perspective(1px);
 }
 main #diensten #cards .card .text {
   height: auto;
