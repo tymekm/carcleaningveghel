@@ -27,7 +27,31 @@
   $mail->addAddress("tymek.m@hotmail.com");
   $mail->FromName = $name;
   $mail->Subject = "Contact form email";
-  $mail->Body = $message;
+  $mail->Body = 
+    "<style>
+      * {
+        font-family: Helvetica;
+      }
+      #info {
+        margin: 10px; 
+      }
+      #bericht {
+        white-space: pre-line;
+        margin: 10px;
+      }
+    </style>
+      <h3>Bericht verzonden vanuit de website:</h3>
+      <div id=\"info\">
+        <p>Naam: {$name}</p>
+        <a href=\"mailto:{$email}\">
+          {$email}</a
+        >
+        <p>Telefoonnummer: {$telnum}</p>
+        <p>Bericht:</p>
+        <p id=\"Bericht\">{$message}\n{$message}</p>
+      </div>
+  ";
+  $mail->IsHTML(true);
 
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo "Dit is geen valide E-mail adres";
@@ -37,7 +61,7 @@
   if(!$mail->send()){
     echo "Je bericht is niet verzonden:\n {$mail->ErrorInfo}";
   } else {
-    echo 'Je bericht is verzonden, we zullen snel contact met je opnemen.';
+    echo "Je bericht is verzonden, we zullen snel contact met je opnemen.";
   }
 ?>
 
