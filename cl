@@ -1,3 +1,3 @@
 #!/bin/bash
 
-lessc ./less/all.less main.css
+lessc ./less/all.less css/main.css
