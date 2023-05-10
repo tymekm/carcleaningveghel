@@ -413,10 +413,20 @@ main {
       }
       display: flex;
       flex-direction: column;
+      input {
+        width: 400px;
+      }
       .form-input {
+        font-size: 1.05rem;
+        font-family: Helvetica;
         padding: 5px;
         margin-bottom: 5px;
-        &:active {
+        &:focus {
+          border: none;
+          outline: none;
+          border-radius: 2px;
+          transition-delay: 0.25s;
+          box-shadow: 0 0 0 1px @blue;
         }
       }
       #submit-button {
@@ -427,7 +437,7 @@ main {
         font-size: 1.2rem;
         border-radius: 3px;
         padding: 4px;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
           0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transition: 0.3s;
         &:hover {
