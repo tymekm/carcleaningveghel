@@ -1,8 +1,9 @@
 <?php
-  require './vendor/autoload.php';
+  require 'vendor/autoload.php';
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\SMTP;
   use PHPMailer\PHPMailer\Exception;
+  include 'credentials.php';
 
   $name = $_REQUEST['name'];
   $email = $_REQUEST['email'];
@@ -18,12 +19,12 @@
   $mail->Port = 587;
   $mail->SMTPAuth = true;
   $mail->SMTPSecure = "tls";
-  $mail->Username = "test@carcleaningveghel.nl";
-  $mail->Password = "Pelnia1992";
+  $mail->Username = $user;
+  $mail->Password = $pass;
   $mail->WordWrap = 50;
   $mail->IsHTML(true);
 
-  $mail->From = "test@carcleaningveghel.nl";
+  $mail->From = $user;
   $mail->addAddress("tymek.m@hotmail.com");
   $mail->FromName = $name;
   $mail->Subject = "Contact form email";
